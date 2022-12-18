@@ -1,5 +1,5 @@
-import { Main } from "next/document";
 import Header from "../Header/Header";
+import Main from "../Main/Main";
 
 const Layout = () => {
   return (
