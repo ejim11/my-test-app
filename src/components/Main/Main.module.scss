@@ -1,0 +1,14 @@
+.first-section {
+    padding: 10.9rem 7.7rem 15.9rem;
+    background-image: url(../../asset/home-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    & h2 {
+        font-size: 7.2rem;
+        font-weight: 700;
+        letter-spacing: -.5%;
+        color: #fff;
+    }
+}
