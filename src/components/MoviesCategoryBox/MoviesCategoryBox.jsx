@@ -21,8 +21,16 @@ const MoviesCategoryBox = () => {
           onChange={onChangeSearchInput}
         />
       </div>
-      <MoviesCategoryItem moviesCategoryName={"Comics"} genre={"avengers"} />
-      <MoviesCategoryItem moviesCategoryName={"Romance"} genre={"romance"} />
+      <MoviesCategoryItem
+        moviesCategoryName={"Comics"}
+        genre={"avengers"}
+        search={searchText}
+      />
+      <MoviesCategoryItem
+        moviesCategoryName={"Romance"}
+        genre={"romance"}
+        search={searchText}
+      />
     </section>
   );
 };

@@ -19,43 +19,43 @@
     }
 
 
-    & .movie {
-        width: 30rem;
-        height: 30rem;
-        margin-right: 1.3rem;
-        flex-shrink: 0;
-        position: relative;
-        cursor: pointer;
+}
 
-        &:hover {
-            & .title {
-                opacity: 1;
-                visibility: visible;
-            }
-        }
+.movie {
+    width: 30rem;
+    height: 30rem;
+    margin-right: 1.3rem;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
 
+    &:hover {
         & .title {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.4rem;
-            background-color: rgba(#000, .8);
-            color: #fff;
-            opacity: 0;
-            visibility: hidden;
-            transition: all .3s ease-in;
-        }
-
-        & img {
-            width: 100%;
-            height: 100%;
+            opacity: 1;
+            visibility: visible;
         }
     }
 
+    & .title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.4rem;
+        background-color: rgba(#000, .8);
+        color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease-in;
+    }
+
+    & img {
+        width: 100%;
+        height: 100%;
+    }
 }

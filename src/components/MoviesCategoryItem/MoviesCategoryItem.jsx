@@ -8,8 +8,15 @@ const MoviesCategoryItem = (props) => {
   const getMovies = async (genre) => {
     const res = await client.get(`/?apikey=b03f5677&s=${genre}`);
     setMoviesList(res.data.Search);
-    console.log(res.data.Search);
   };
+  let filteredMovie;
+
+  if (props.search) {
+    filteredMovie = moviesList.filter(
+      (item) => item.Title.toLowerCase() === props.search.toLowerCase()
+    );
+    console.log(filteredMovie);
+  }
 
   useEffect(() => {
     getMovies(props.genre);
@@ -17,15 +24,26 @@ const MoviesCategoryItem = (props) => {
 
   return (
     <div className={classes.movies}>
-      <p className={classes.category}>{props.moviesCategoryName}</p>
-      <div className={classes["movies-list"]}>
-        {moviesList.map((item, i) => (
+      {filteredMovie ? (
+        filteredMovie.map((item, i) => (
           <div key={i} className={classes.movie}>
             <img src={item.Poster} alt={item.Title} />
             <p className={classes.title}>{item.Title}</p>
           </div>
-        ))}
-      </div>
+        ))
+      ) : (
+        <>
+          <p className={classes.category}>{props.moviesCategoryName}</p>
+          <div className={classes["movies-list"]}>
+            {moviesList.map((item, i) => (
+              <div key={i} className={classes.movie}>
+                <img src={item.Poster} alt={item.Title} />
+                <p className={classes.title}>{item.Title}</p>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 };
