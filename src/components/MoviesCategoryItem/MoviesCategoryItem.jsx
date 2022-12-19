@@ -4,10 +4,12 @@ import classes from "./MoviesCategoryItem.module.scss";
 
 const MoviesCategoryItem = (props) => {
   const [moviesList, setMoviesList] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const getMovies = async (genre) => {
     const res = await client.get(`/?apikey=b03f5677&s=${genre}`);
     setMoviesList(res.data.Search);
+    setLoading(false);
   };
   let filteredMovie;
 
@@ -33,6 +35,8 @@ const MoviesCategoryItem = (props) => {
             </div>
           ))}
         </div>
+      ) : loading ? (
+        <p>Loading...</p>
       ) : (
         <>
           <p className={classes.category}>{props.moviesCategoryName}</p>
