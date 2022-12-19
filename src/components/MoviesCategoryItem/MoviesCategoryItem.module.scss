@@ -30,6 +30,11 @@
     position: relative;
     cursor: pointer;
 
+    @include respond(phone) {
+        width: 22rem;
+        height: 22rem;
+    }
+
     &:hover {
         & .title {
             opacity: 1;
