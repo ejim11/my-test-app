@@ -1,9 +1,27 @@
+@import "/src/components/scss/mixin";
+
 .movies-category-box {
     padding: 6.3rem 0 6.7rem 7.7rem;
+
+    @include respond(phone) {
+        padding: 6.3rem 0 6.7rem 2.5rem;
+    }
 
     & .search-box {
         display: flex;
         flex-direction: column;
+        width: 95%;
+
+        @include respond(tablet) {
+            width: 100%;
+            padding-right: 7.7rem;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+            padding-right: 2.5rem;
+        }
+
 
         & label {
             color: #000;
@@ -13,7 +31,7 @@
         }
 
         & input {
-            width: 95%;
+            width: 100%;
             border: 1px solid #000000;
             outline: none;
             padding: 2rem;

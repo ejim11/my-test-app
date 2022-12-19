@@ -25,12 +25,14 @@ const MoviesCategoryItem = (props) => {
   return (
     <div className={classes.movies}>
       {filteredMovie ? (
-        filteredMovie.map((item, i) => (
-          <div key={i} className={classes.movie}>
-            <img src={item.Poster} alt={item.Title} />
-            <p className={classes.title}>{item.Title}</p>
-          </div>
-        ))
+        <div className={classes["searched-movie-list"]}>
+          {filteredMovie.map((item, i) => (
+            <div key={i} className={classes["searched-movie"]}>
+              <img src={item.Poster} alt={item.Title} />
+              <p className={classes.title}>{item.Title}</p>
+            </div>
+          ))}
+        </div>
       ) : (
         <>
           <p className={classes.category}>{props.moviesCategoryName}</p>

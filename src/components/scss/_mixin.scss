@@ -1,0 +1,66 @@
+@mixin respond($breakpoint) {
+    @if $breakpoint ==smallPhone {
+        @media (max-width: 18.75em) {
+            //300
+            @content;
+        }
+    }
+
+    @if $breakpoint ==phone {
+        @media (max-width: 37.5em) {
+            //600
+            @content;
+        }
+    }
+
+
+
+    // @if $breakpoint ==midTablet {
+    //     @media (max-width: 46.875em) {
+    //         //750
+    //         @content;
+    //     }
+    // }
+
+    // @if $breakpoint ==tablet {
+    //     @media (max-width: 50em) {
+    //         //800
+    //         @content;
+    //     }
+    // }
+
+    @if $breakpoint ==tablet {
+        @media (max-width: 62.5em) {
+            //1000
+            @content;
+        }
+    }
+
+    // @if $breakpoint ==miniLaptop {
+    //     @media (max-width: 75em) {
+    //         //1200
+    //         @content;
+    //     }
+    // }
+
+    @if $breakpoint ==laptop {
+        @media (max-width: 90em) {
+            //1440
+            @content;
+        }
+    }
+
+    // @if $breakpoint ==medLaptop {
+    //     @media (max-width: 121.875em) {
+    //         //1950
+    //         @content;
+    //     }
+    // }
+
+    @if $breakpoint ==bigLaptop {
+        @media (max-width: 125em) {
+            //2000
+            @content;
+        }
+    }
+}

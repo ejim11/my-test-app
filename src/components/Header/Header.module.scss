@@ -1,4 +1,15 @@
+@import "/src/components/scss/mixin";
+
 .header {
     padding: 4rem 7.7rem;
     background-color: #292929;
+
+    @include respond(tablet) {
+        display: flex;
+        justify-content: center;
+    }
+
+    @include respond(phone) {
+        padding: 1.6rem 0;
+    }
 }
