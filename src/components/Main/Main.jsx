@@ -1,3 +1,4 @@
+import MoviesCategoryBox from "../MoviesCategoryBox/MoviesCategoryBox";
 import classes from "./Main.module.scss";
 
 const Main = () => {
@@ -9,6 +10,7 @@ const Main = () => {
           <br /> something <br /> incredible.
         </h2>
       </section>
+      <MoviesCategoryBox />
     </main>
   );
 };

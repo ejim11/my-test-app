@@ -1,0 +1,22 @@
+.movies-category-box {
+    padding: 6.3rem 0 6.7rem 7.7rem;
+
+    & .search-box {
+        display: flex;
+        flex-direction: column;
+
+        & label {
+            color: #000;
+            font-size: 2.4rem;
+            font-weight: 400;
+            margin-bottom: .5rem;
+        }
+
+        & input {
+            width: 95%;
+            border: 1px solid #000000;
+            outline: none;
+            padding: 2rem;
+        }
+    }
+}
